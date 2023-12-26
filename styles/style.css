@@ -24,9 +24,10 @@ html {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto; 
   width: 1140px; /**/
-  justify-self: center;
+  object-position: center;
   align-content: end;
  margin: 133px 30px 133px 30px; /*does it need?*/
+ gap: 30px;
 }
 
 .result {
@@ -37,16 +38,19 @@ html {
 }
 
 .result__video-container {
+  display: block;
   position: relative;
+  height: 386px;
   right: 0;
   overflow: hidden;
+align-self: end;
 }
 
 .result__video {
-  object-fit: contain;
+  display: block; 
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-position: contain;
 }
 
 .search-form {
@@ -105,6 +109,10 @@ font-weight: 400;
 line-height: normal;
 }
 
+.search-form__label:has(:focus-visible) {
+
+}
+
 
 
 .search-form__checkbox-list {
@@ -136,9 +144,7 @@ clip-path: inset (50%); /**/
   cursor: pointer;
 }
 
-.search-form__pseudo-checkbox:checked + .active {
-  background-color: rgb(255, 255, 255); 
-}
+
 
 
 .visually-hidden {
@@ -207,6 +213,11 @@ margin-bottom: 26px;
   overflow-x: hidden;
 }
 
+.content__list::-webkit-scrollbar {
+  display: none;
+}
+
+
 .content__card-link {
   text-decoration: none ;
 
@@ -215,7 +226,6 @@ margin-bottom: 26px;
 .result__video {
   width: 711px;
   height: 534px;
-  padding-right: 30px;
 }
 
 h1,
@@ -267,7 +277,7 @@ text-transform: uppercase;
 
 .content__video-card-description-container {
   display: inline-block;
-  width: 100%;
+  width: 200px;
 text-align: start;
 text-decoration: none;
 color: inherit;
@@ -296,9 +306,10 @@ text-transform: uppercase;
 
 .content__video-card-thumbnail {
   display: block;
-  
   height: 103px;
 align-self: end;
+width: 194px;
+
 }
 
 .more-button {
