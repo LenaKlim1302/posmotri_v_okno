@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -24,7 +25,7 @@ html {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto; 
   max-width: 1140px; /**/
-  align-self: end;
+  vertical-align: center;
  margin: 133px 30px 133px 30px; /*does it need?*/
  gap: 30px;
 }
