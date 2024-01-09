@@ -24,14 +24,15 @@ html {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto; 
   max-width: 1140px; /**/
- 
-  object-position: center;
-  align-content: center;
+  align-self: end;
  margin: 133px 30px 133px 30px; /*does it need?*/
  gap: 30px;
 }
 
-
+.result {
+  display: inline-block;
+  align-self: end;
+}
 
 
 
@@ -57,7 +58,7 @@ align-self: end;
 .search-form {
   display: flex;
   gap: 40px;
-margin-bottom: 133px;
+
 }
 
 .search-form__label {
@@ -162,7 +163,7 @@ text-align: center;
 .search-form__pseudo-checkbox:active::before {
   display: inline-block;
   content: "";
-background-color: #aa5555;
+background-color: #ffffff;
   width: 15px;
  height: 15px;
 
@@ -243,6 +244,7 @@ margin-bottom: 26px;
 }
 
 .content__accent {
+
   color: #545050;
   
 }
@@ -261,11 +263,17 @@ margin-bottom: 26px;
   position: relative;
   height: 298px;
   overflow: scroll;
-  gap: 30px;
+ 
   overflow-x: hidden;
 }
 
+.content__list-item {
+  margin-bottom: 30px;
+}
 
+.content__list-item:last-child {
+  margin-bottom: 0px;
+}
 
 
 .content__card-link {
@@ -283,7 +291,7 @@ margin-bottom: 26px;
   outline: none;
 }
 
-.content__list-item:focus-visible {
+.content__card-link_current:focus-visible {
   border: 20px solid white;
 }
 
