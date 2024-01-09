@@ -292,7 +292,7 @@ margin-bottom: 26px;
 }
 
 .content__card-link_current:focus-visible {
-  border: 20px solid white;
+  border: 2px solid white;
 }
 
 .content__card-link_current:active {
