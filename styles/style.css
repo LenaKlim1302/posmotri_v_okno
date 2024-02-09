@@ -65,6 +65,7 @@ fieldset {
 .search-form {
     display: flex;
     gap: 40px;
+    min-height: 55px;
 }
 
 .search-form__label {
@@ -101,24 +102,41 @@ fieldset {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    appearance: none;
 }
+
+
 
 .search-form__textfield:focus {
     outline: none;
 }
+
+.search-form__textfield:active { /*work*/
+    outline: 1px solid white;
+}
+
+
 
 .search-form__checkbox-list {
     display: flex;
     gap: 15px;
 }
 
-.search-form__label:focus {
+
+.search-form__label:has(:focus) {
     outline: none;
 }
 
 .search-form__label:has(:focus-visible) {
     outline: 1px solid white;
 }
+
+.search-form__label:has(:hover) 
+.search-form__label-text {
+    text-decoration: underline;
+    cursor: pointer;
+   } 
+
 
 .search-form__pseudo-checkbox {
     display: inline-block;
@@ -128,11 +146,27 @@ fieldset {
     height: 19px;
     margin-right: 5px;
     align-self: center;
-}
-
-.search-form__pseudo-checkbox:hover {
     cursor: pointer;
 }
+
+.search-form__checkbox:active + 
+.search-form__pseudo-checkbox::before  {
+    display: block;
+    position: relative;
+    content: "";
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    left: 1px;
+    top: 1px;
+    text-decoration: none;
+}
+
+/*.search-form__checkbox:active + 
+.search-form__label +
+.search-form__label-text {
+    text-decoration: none;
+}*/
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
     display: block;
@@ -144,6 +178,7 @@ fieldset {
     left: 1px;
     top: 1px;
 }
+
 
 .visually-hidden {
     position: absolute;
@@ -177,7 +212,7 @@ fieldset {
     display: flex;
     align-self: end;
     flex-direction: column;
-    min-width: 399px;
+    min-width: 416px; 
 }
 
 .title {
@@ -207,6 +242,7 @@ ol {
     width: object-fit;
     overflow-x: hidden;
 }
+
 
 .content__list-item {
     margin-bottom: 30px;
@@ -243,6 +279,12 @@ ol {
     background-color: #545050;
 }
 
+.content__card-link_current,
+.content__card-link:active {
+    background-color: #545050;
+    text-decoration: none;
+}
+
 .content__card-link_current:not(:checked):hover {
     text-decoration: none;
 }
@@ -257,7 +299,6 @@ ol {
     text-align: start;
     text-decoration: none;
     color: inherit;
-    padding-left: -3px;
 }
 
 .content__video-card-title {
@@ -287,7 +328,6 @@ ol {
     width: 195px;
     object-fit: cover;
     object-position: center;
-    margin-right: -16px;
 }
 
 .more-button {
@@ -305,7 +345,6 @@ ol {
     text-align: center;
     cursor: pointer;
     border: 1px solid white;
-    margin-bottom: 1px;
 }
 
 .button:focus {
