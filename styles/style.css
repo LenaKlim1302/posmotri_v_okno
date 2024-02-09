@@ -52,7 +52,7 @@ fieldset {
     margin-bottom: 14px;
     height: auto;
     align-self: end;
-    width: 711px;
+    width: 710px;
 }
 
 .result__video {
@@ -105,23 +105,18 @@ fieldset {
     appearance: none;
 }
 
-
-
 .search-form__textfield:focus {
     outline: none;
 }
 
-.search-form__textfield:active { /*work*/
+.search-form__textfield:active {
     outline: 1px solid white;
 }
-
-
 
 .search-form__checkbox-list {
     display: flex;
     gap: 15px;
 }
-
 
 .search-form__label:has(:focus) {
     outline: none;
@@ -131,12 +126,10 @@ fieldset {
     outline: 1px solid white;
 }
 
-.search-form__label:has(:hover) 
-.search-form__label-text {
+.search-form__label:has(.search-form__checkbox:hover) {
     text-decoration: underline;
     cursor: pointer;
-   } 
-
+}
 
 .search-form__pseudo-checkbox {
     display: inline-block;
@@ -149,8 +142,7 @@ fieldset {
     cursor: pointer;
 }
 
-.search-form__checkbox:active + 
-.search-form__pseudo-checkbox::before  {
+.search-form__checkbox:active + .search-form__pseudo-checkbox::before {
     display: block;
     position: relative;
     content: "";
@@ -162,11 +154,13 @@ fieldset {
     text-decoration: none;
 }
 
-/*.search-form__checkbox:active + 
-.search-form__label +
-.search-form__label-text {
+.search-form__label:has(.search-form__checkbox:checked) {
     text-decoration: none;
-}*/
+}
+
+.search-form__label:has(.search-form__checkbox:active) {
+    text-decoration: none;
+}
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
     display: block;
@@ -178,7 +172,6 @@ fieldset {
     left: 1px;
     top: 1px;
 }
-
 
 .visually-hidden {
     position: absolute;
@@ -212,7 +205,7 @@ fieldset {
     display: flex;
     align-self: end;
     flex-direction: column;
-    min-width: 416px; 
+    min-width: 416px;
 }
 
 .title {
@@ -242,7 +235,6 @@ ol {
     width: object-fit;
     overflow-x: hidden;
 }
-
 
 .content__list-item {
     margin-bottom: 30px;
