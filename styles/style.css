@@ -42,6 +42,11 @@ fieldset {
     padding: 0;
 }
 
+ul,
+ol {
+    list-style: none;
+}
+
 .result {
     display: inline-block;
     align-self: end;
@@ -206,7 +211,6 @@ fieldset {
     display: flex;
     align-self: end;
     flex-direction: column;
-    min-width: 416px;
 }
 
 .title {
@@ -221,11 +225,6 @@ fieldset {
 
 .content__accent {
     color: #545050;
-}
-
-ul,
-ol {
-    list-style: none;
 }
 
 .content__list {
@@ -301,8 +300,8 @@ ol {
     font-style: normal;
     font-weight: 700;
     text-transform: uppercase;
-    margin-top: -3px;
     margin-bottom: 6px;
+    line-height: 100%;
 }
 
 .content__video-card-description {
@@ -311,8 +310,7 @@ ol {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16.2px;
-    margin-top: -3px;
+    line-height: 90%;
 }
 
 .content__video-card-thumbnail {
